@@ -39,7 +39,8 @@ app.post("/sign-up", (req, res) => {
   }
 
   usuarios.push(req.body);
-  res.sendStatus(200);
+  // res.sendStatus(200);
+  res.status(200).json({message: 'OK'})
 });
 
 app.post("/tweets", (req, res) => {
@@ -51,7 +52,8 @@ app.post("/tweets", (req, res) => {
   }
 
   tweets.push(req.body);
-  res.sendStatus(200);
+  // res.sendStatus(200);
+  res.status(200).json({message: 'OK'})
 });
 
 //estou permitindo o app receber requisições do tipo get. O get recebe dois parâmetros. 1) o nome da rota(é o caminho que meu cliente acessará) e 2) O que ele fará? - function. Obs.: O get, por padrão, já é uma requisição automática. Isso significa q só preciso de fato RESPONDER
